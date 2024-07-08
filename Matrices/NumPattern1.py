@@ -1,3 +1,5 @@
+# nxn Number Matrix 
+
 def matrix(n):
     for i in range(n):
         num = 5*(i+1)

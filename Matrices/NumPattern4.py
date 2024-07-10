@@ -1,5 +1,6 @@
 # Pascal Triangle
 
+# Method 1: With Memory Complexity
 def num_pyramid(n):
     mylist1 = [1,1]
     print((n-1)*" ",end=' ')
@@ -24,3 +25,16 @@ def num_pyramid(n):
         mylist1 = mylist2
 
 num_pyramid(5)
+
+# Method 2: Without Memory Complexity
+def print_pascals_triangle(n):
+    for i in range(1, n + 1):
+        c = 1
+        print((n-i)*" ",end=' ')
+        for j in range(1, i + 1):
+            print(c, end=' ')
+            c = c * (i - j) // j
+        print()
+
+n = 6
+print_pascals_triangle(n)
